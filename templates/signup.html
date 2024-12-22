@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sign up</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'signup.css' %}">
+    </head>
+
+    <body>
+
+        <center>
+            
+            <h1>SIGN UP</h1>
+
+            <form method="POST" action="signup">
+                {% csrf_token %}
+                
+                <label>Username</label>
+                <input name="username"><br><br>
+                
+                <label>Email</label>
+                <input type="email" name="email"><br><br>
+
+                <label>Password</label>
+                <input type="password" name="password"><br><br>
+
+                <label>Repeat Password</label>
+                <input type="password" name="password2"><br><br>
+
+                {% for message in messages %}
+                    <h5>{{message}}</h5>
+                {% endfor %}
+
+                <button type="submit">Sign up</button>
+            </form>
+        </center>
+    
+    </body>
+</html>
