@@ -13,9 +13,10 @@ def signup(request):
         password2 = request.POST['password2']
         
         if password==password2:
+            
             if User.objects.filter(email=email).exists():
                 messages.info(request, 'Email already used by another account, please use a different email')
-                return redirect('signup')
+                return redirect('signup')   
             elif User.objects.filter(username=username).exists():
                 messages.info(request, 'Username already taken, please use different username')
                 return redirect('signup')
