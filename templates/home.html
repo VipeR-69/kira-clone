@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Home</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{% static 'landing.css' %}">
     </head>
 
@@ -14,18 +14,23 @@
         {% csrf_token %}
 
         <header class="header">
-            {% if user.is_authenticated %}
-                <h1 class='welcome'>Kiraflix, {{user.username}}</h1>
-            {% endif %}
+                <h1 class='logo'>Kiraflix</h1>
 
-            <nav class="navbar">
-                <a href="#">All</a>
-                <a href="#">Movies</a>
-                <a href="#">TV Shows</a>
-                <a href="#">New</a>
-                <a href="#">Sign in</a>
-            </nav>
+                <nav class="navbar">
+                    <a href="#">All</a>
+                    <a href="#">Movies</a>
+                    <a href="#">TV Shows</a>
+                    <a href="#">New</a>
+                </nav>
+
+                <nav class="navbar">
+                    <div class='nav-right'>
+                        <a href="#">Search</a>
+                        <a href="#">Sign in</a>
+                    </div>
+                </nav>
         </header>
     
     </body>
+
 </html>

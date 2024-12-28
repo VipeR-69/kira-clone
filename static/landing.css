@@ -13,25 +13,26 @@ h5{
     color: red;
 }
 
-.welcome{
+.logo{
     color: antiquewhite;
+    font-size: 42px;
 }
 
 .header{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 20px 10%;
-        background: rgb(198, 18, 18);
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 6%;
+    background: rgb(198, 18, 18);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: 100;
 }
 
 .navbar a{
-    font-size: 18px;
+    font-size: 17px;
     color: #ededed;
     text-decoration: none;
     font-weight: 500;
@@ -42,4 +43,8 @@ h5{
 .navbar a:hover{
     color: #000000;
     font-size: 19px;
+}
+
+.nav-right{
+    margin-left: 480px;
 }
