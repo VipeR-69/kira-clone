@@ -13,23 +13,42 @@
     <body>
         {% csrf_token %}
 
-        <header class="header">
-                <h1 class='logo'>Kiraflix</h1>
-
-                <nav class="navbar">
-                    <a href="#">All</a>
-                    <a href="#">Movies</a>
-                    <a href="#">TV Shows</a>
-                    <a href="#">New</a>
+                <nav>
+                    <ul class="sidebar">
+                        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height='26' width='26' fill="currentColor"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg></a></li>
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">TV Shows</a></li>
+                        <li><a href="#">New</a></li>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Sign in</a></li>
+                    </ul>
                 </nav>
 
-                <nav class="navbar">
-                    <div class='nav-right'>
-                        <a href="#">Search</a>
-                        <a href="#">Sign in</a>
-                    </div>
+                <nav>
+                    <ul>
+                        <li>Kiraflix</li>
+                        <li class='hideOnMobile'><a href="#">All</a></li>
+                        <li class='hideOnMobile'><a href="#">Movies</a></li>
+                        <li class='hideOnMobile'><a href="#">TV Shows</a></li>
+                        <li class='hideOnMobile'><a href="#">New</a></li>
+                        <li class='hideOnMobile'><a href="#">Search</a></li>
+                        <li class='hideOnMobile'><a href="#">Sign in</a></li>
+                        <li class='menu-button' onclick=showSidebar()><a href"#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="26" width="26" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg></a></li>
+                    </ul>
                 </nav>
-        </header>
+
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
     
     </body>
 

@@ -4,33 +4,40 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Login</title>
+        <title>Sign in</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'login.css' %}">
+        <link rel="stylesheet" href="{% static 'signin.css' %}">
     </head>
 
     <body>
 
-        <center>            
-            <h1>USER LOGIN</h1>
+        <header class="header">
+                <h1 class='logo'>Kiraflix</h1>
+        </header>
 
-            <form method="POST" action="login">
-                {% csrf_token %}
-                
-                <label>Username</label>
-                <input name="username"><br><br>
-                
-                <label>Password</label>
-                <input type="password" name="password"><br><br>
+        <center>
+            <div class='mid'>
+                <h1 class='logo'>Sign in</h1><br>
 
-                {% for message in messages %}
-                    <h5>{{message}}</h5>
-                {% endfor %}
+                <form method="POST" action="login">
+                    {% csrf_token %}
                 
-                <button type="submit">Log in</button>
+                    <label class='left'>Username</label><br>
+                    <input name="username"><br><br>
                 
-            </form>
+                    <label class='left'>Password</label><br>
+                    <input type="password" name="password"><br><br>
+                
+                    <button type="submit">Sign in</button><br><br>
+
+                    {% for message in messages %}
+                        <h6>{{message}}</h6>
+                    {% endfor %}
+                
+                </form>
+
+            </div>
         </center>
     
     </body>

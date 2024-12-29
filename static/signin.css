@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: #011422;
+}
+
+h6{
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo{
+    color: antiquewhite;
+    font-size: 42px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 6%;
+    background: rgb(198, 18, 18);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: 100;
+}
+
+.mid{
+    margin-top: 240px;
+}
+
+.left{
+    color: beige;
+}
