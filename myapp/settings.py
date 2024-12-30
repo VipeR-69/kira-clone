@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 
 import dj_database_url
+from decouple import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-7ne_h5-!o@_8*s50sujgf9gi(2d0-0toyq-fu!1ea(4*8q=1@='
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com', '.railway.app']
 
@@ -84,7 +85,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.parse("postgresql://kiratest_user:GEl7ry6VnsAnXm0iQo5yvLXHCF9VOVxP@dpg-ctpdpiogph6c73ddd1q0-a.oregon-postgres.render.com/kiratest")
+DATABASES['default'] = dj_database_url.parse(config("DATABASE_URL"))
 
 
 # Password validation
