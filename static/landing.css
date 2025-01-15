@@ -57,7 +57,7 @@ nav a:hover{
     right: 0;
     height: 100vh;
     padding: 30px 25px;
-    width: 250px;
+    width: 300px;
     z-index: 999;
     background-color: rgba(103, 103, 103, 0.232);
     backdrop-filter: blur(10px);
