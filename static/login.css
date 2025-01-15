@@ -85,10 +85,6 @@ p{
     transition: .3s;
 }
 
-.inputField:focus{
-    width: 105%;
-}
-
 .forgot{
     display: flex;
     justify-content: space-between;
