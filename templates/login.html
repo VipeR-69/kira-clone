@@ -6,39 +6,55 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Sign in</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'signin.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'login.css' %}">
     </head>
 
     <body>
+        {% csrf_token %}
+        <section>
+            <nav>
+                <ul>
+                    <li>KIRAFLIX</li>
+                </ul>
+            </nav>
+        </section>
 
-        <header class="header">
-                <h1 class='logo'>Kiraflix</h1>
-        </header>
+        <section class="loginSection">
+                <h1>Sign in</h1>
+                <div class="loginForm">
+                    <form method="POST" action="signin">
+                        {% csrf_token %}
+                        
+                        {% for message in messages %}
+                            <h6>{{message}}</h6>
+                        {% endfor %}
+                        
+                        <div class="inputBox">
+                            <input class="inputField" type="text" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="inputBox">
+                            <input class="inputField" type="password" name="password" placeholder="Password" required>
+                        </div>
 
-        <center>
-            <div class='mid'>
-                <h1 class='logo'>Sign in</h1><br>
+                        <div class="forgot">
+                            <section>
+                                <input type="checkbox" id="check">
+                                <label class="checkLabel" for="check">Remember me</label>
+                            </section>
+                            <section>
+                                <a href="#">Forgot Password ?</a>
+                            </section>
+                        </div>
 
-                <form method="POST" action="login">
-                    {% csrf_token %}
-                
-                    <label class='left'>Username</label><br>
-                    <input name="username"><br><br>
-                
-                    <label class='left'>Password</label><br>
-                    <input type="password" name="password"><br><br>
-                
-                    <button type="submit">Sign in</button><br><br>
+                        <button class="submitButton" type="submit">Sign in</button>
+                    </form>
 
-                    {% for message in messages %}
-                        <h6>{{message}}</h6>
-                    {% endfor %}
-                
-                </form>
-
-            </div>
-        </center>
-    
+                    <div class="signupLink">
+                        <p>Don't have an account ? <a href="/signup"> Sign up</a></p>
+                    </div>
+                </div>
+        </section>
     </body>
+
 </html>

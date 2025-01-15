@@ -30,9 +30,9 @@ nav li{
 nav li:first-child{
     margin-right: auto;
     color: #DC2626;
-    font-size: 40px;
+    font-size: 1.7em;
     font-weight: 600;
-    margin-bottom: 10px;
+    align-items: center;
 }
 
 nav a{
@@ -78,6 +78,7 @@ nav a:hover{
 
 .menu-button{
     display: none;
+    padding-bottom: 10px;
 }
 
 .welcome{
@@ -109,6 +110,7 @@ nav a:hover{
     border-radius: 10px 10px 10px 10px;
     outline: none;
     border: 1px solid #e32525;
+    cursor: pointer;
 }
 
 .signIn:hover{
