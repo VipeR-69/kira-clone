@@ -1,0 +1,1330 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="7790358f-d526-43a5-a294-c73f96409b6f" data-section-id="7790358f-d526-43a5-a294-c73f96409b6f">
+
+
+                <htmlcode id="el-817or9o1">
+<div id="root">
+  <nav id="navbar" class="bg-neutral-900 fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-rqoxe4tt">
+      <div class="flex items-center justify-between h-16" id="el-d77s5vof">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="text-red-600 font-bold text-2xl animate__animated animate__fadeIn">
+            KIRAFLIX
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#featured" class="text-gray-300 hover:text-white px-3 py-2">All</a>
+          <a href="#trending" class="text-gray-300 hover:text-white px-3 py-2">Movies</a>
+          <a href="#categories" class="text-gray-300 hover:text-white px-3 py-2">TV Shows</a>
+          <div class="relative group">
+            <button class="text-gray-300 hover:text-white px-3 py-2 flex items-center">
+              Genres
+              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="absolute hidden group-hover:block w-48 bg-neutral-800 rounded-md shadow-lg py-1">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-neutral-700">Action</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-neutral-700">Comedy</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-neutral-700">Drama</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-neutral-700">Horror</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="hidden md:flex items-center mx-4">
+          <div class="relative">
+            <input type="search" placeholder="Search movies &amp; shows..." class="bg-neutral-800 text-gray-300 px-4 py-2 pl-10 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 w-64">
+            <div class="absolute left-3 top-2.5">
+              <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center">
+          <button class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 animate__animated animate__pulse">
+            Login
+          </button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-gray-300 hover:text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1" id="el-shd9cr29">
+          <a href="#featured" class="block text-gray-300 hover:text-white px-3 py-2" id="el-r2nto45k">All</a>
+          <a href="#trending" class="block text-gray-300 hover:text-white px-3 py-2" id="el-zd3a3ob7">Movies</a>
+          <a href="#categories" class="block text-gray-300 hover:text-white px-3 py-2" id="el-mzoys5sd">TV Shows</a>
+          <button class="text-gray-300 hover:text-white px-3 py-2 w-full text-left" id="mobile-genre-button">
+            Genres
+          </button>
+          <div id="mobile-genre-menu" class="hidden pl-4">
+            <a href="#" class="block text-gray-300 hover:text-white px-3 py-2" id="el-zfil6prn">Action</a>
+            <a href="#" class="block text-gray-300 hover:text-white px-3 py-2" id="el-ox3foxgy">Comedy</a>
+            <a href="#" class="block text-gray-300 hover:text-white px-3 py-2" id="el-75xzjddt">Drama</a>
+            <a href="#" class="block text-gray-300 hover:text-white px-3 py-2" id="el-3mvb7sj0">Horror</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Mobile genre menu toggle
+    const mobileGenreButton = document.getElementById('mobile-genre-button');
+    const mobileGenreMenu = document.getElementById('mobile-genre-menu');
+    
+    mobileGenreButton.addEventListener('click', () => {
+      mobileGenreMenu.classList.toggle('hidden');
+    });
+  </script>
+</div>
+</htmlcode>
+              </element><element id="3a3a2bf7-de45-4b31-a9ac-8bd354470ceb" data-section-id="3a3a2bf7-de45-4b31-a9ac-8bd354470ceb">
+
+
+                <htmlcode id="el-gy4c3g3k">
+<div id="root">
+  <section id="hero" class="bg-neutral-900 min-h-[70vh] relative overflow-hidden pt-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-900 z-10" id="el-4n7sh3xq"></div>
+    
+    <!-- Background video effect -->
+    <div class="absolute inset-0 opacity-50" id="el-sq4mxkgi">
+      <div class="bg-gradient-to-r from-red-600 to-purple-600 animate-gradient-x absolute inset-0" id="el-yholtmd0"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 h-full flex items-center" id="el-3piazb2f">
+      <div class="text-center md:text-left md:w-1/2 pt-20" id="el-54pcjnu2">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate__animated animate__fadeInUp" id="el-3hn5hikd">
+          Unlimited Movies &amp; TV Shows
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8 animate__animated animate__fadeInUp animate__delay-1s" id="el-teoywp10">
+          Watch anywhere. Stream unlimited content with no commitments.
+        </p>
+        <div class="space-y-4 md:space-y-0 md:space-x-4 animate__animated animate__fadeInUp animate__delay-2s" id="el-54hrv5mn">
+          <button class="bg-red-600 text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-red-700 transition duration-300 w-full md:w-auto" id="el-d98841ca">
+  Start Watching For Free
+</button>
+          <button class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-white hover:text-neutral-900 transition duration-300 w-full md:w-auto mt-4 md:mt-0" id="el-2d1e6qgw">
+            Explore Plans
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative elements -->
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-neutral-900 to-transparent z-20" id="el-nq2jlklx"></div>
+    <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-red-600 rounded-full filter blur-3xl opacity-20 animate-pulse" id="el-2ttpz4yt"></div>
+    <div class="absolute -top-10 -left-10 w-72 h-72 bg-purple-600 rounded-full filter blur-3xl opacity-20 animate-pulse" id="el-fghn78dl"></div>
+  </section>
+
+  <style>
+    @keyframes gradient-x {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animate-gradient-x {
+      background-size: 200% 200%;
+      animation: gradient-x 15s ease infinite;
+    }
+  </style>
+</div>
+</htmlcode>
+              </element><element id="31514e54-2335-4a60-b981-20f1c846d3e0" data-section-id="31514e54-2335-4a60-b981-20f1c846d3e0">
+
+
+                <htmlcode id="el-aj7bxkq0">
+<div id="root">
+  <section id="featured" class="bg-neutral-800 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+  <h2 class="text-3xl font-bold text-white mb-8 animate__animated animate__fadeIn">Featured Today</h2>
+  
+  <!-- Slider Navigation Buttons -->
+  <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-3 rounded-r-lg transition-all duration-300 z-10" onclick="slideLeft()">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+    </svg>
+  </button>
+  
+  <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-3 rounded-l-lg transition-all duration-300 z-10" onclick="slideRight()">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
+
+  <!-- Featured Grid -->
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 overflow-hidden" id="featuredGrid">
+    <!-- Featured Item 1 -->
+    <div class="featured-item">
+      <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 h-full">
+        <div class="aspect-[2/3] bg-neutral-700 animate-pulse"></div>
+        <div class="p-3">
+          <h3 class="text-white text-lg font-semibold mb-1 truncate">Stranger Things</h3>
+          <div class="flex items-center mb-1">
+            <span class="text-red-500 mr-2 text-sm">98%</span>
+            <span class="text-gray-400 text-sm">2022</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Item 2 -->
+    <div class="featured-item">
+      <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 h-full">
+        <div class="aspect-[2/3] bg-neutral-700 animate-pulse"></div>
+        <div class="p-3">
+          <h3 class="text-white text-lg font-semibold mb-1 truncate">The Crown</h3>
+          <div class="flex items-center mb-1">
+            <span class="text-red-500 mr-2 text-sm">95%</span>
+            <span class="text-gray-400 text-sm">2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Item 3 -->
+    <div class="featured-item">
+      <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 h-full">
+        <div class="aspect-[2/3] bg-neutral-700 animate-pulse"></div>
+        <div class="p-3">
+          <h3 class="text-white text-lg font-semibold mb-1 truncate">Wednesday</h3>
+          <div class="flex items-center mb-1">
+            <span class="text-red-500 mr-2 text-sm">92%</span>
+            <span class="text-gray-400 text-sm">2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Item 4 -->
+    <div class="featured-item">
+      <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 h-full">
+        <div class="aspect-[2/3] bg-neutral-700 animate-pulse"></div>
+        <div class="p-3">
+          <h3 class="text-white text-lg font-semibold mb-1 truncate">The Witcher</h3>
+          <div class="flex items-center mb-1">
+            <span class="text-red-500 mr-2 text-sm">94%</span>
+            <span class="text-gray-400 text-sm">2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Item 5 -->
+    <div class="featured-item">
+      <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 h-full">
+        <div class="aspect-[2/3] bg-neutral-700 animate-pulse"></div>
+        <div class="p-3">
+          <h3 class="text-white text-lg font-semibold mb-1 truncate">Black Mirror</h3>
+          <div class="flex items-center mb-1">
+            <span class="text-red-500 mr-2 text-sm">96%</span>
+            <span class="text-gray-400 text-sm">2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Item 6 -->
+    <div class="featured-item">
+      <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 h-full">
+        <div class="aspect-[2/3] bg-neutral-700 animate-pulse"></div>
+        <div class="p-3">
+          <h3 class="text-white text-lg font-semibold mb-1 truncate">Bridgerton</h3>
+          <div class="flex items-center mb-1">
+            <span class="text-red-500 mr-2 text-sm">91%</span>
+            <span class="text-gray-400 text-sm">2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentPosition = 0;
+    const itemWidth = document.querySelector('.featured-item').offsetWidth;
+    const gridContainer = document.getElementById('featuredGrid');
+    const itemCount = document.querySelectorAll('.featured-item').length;
+
+    function slideLeft() {
+      if (currentPosition < 0) {
+        currentPosition += itemWidth;
+        gridContainer.style.transform = `translateX(${currentPosition}px)`;
+        gridContainer.style.transition = 'transform 0.5s ease-in-out';
+      }
+    }
+
+    function slideRight() {
+      const maxScroll = -(itemWidth * (itemCount - 6));
+      if (currentPosition > maxScroll) {
+        currentPosition -= itemWidth;
+        gridContainer.style.transform = `translateX(${currentPosition}px)`;
+        gridContainer.style.transition = 'transform 0.5s ease-in-out';
+      }
+    }
+  </script>
+</div>
+  </section>
+
+  <script>
+    const slider = document.querySelector('.slider-track');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+    const slidesCount = document.querySelectorAll('.featured-item').length;
+
+    function updateSlider() {
+      const slideWidth = document.querySelector('.featured-item').offsetWidth;
+      slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentSlide = Math.max(currentSlide - 1, 0);
+      updateSlider();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentSlide = Math.min(currentSlide + 1, slidesCount - 1);
+      updateSlider();
+    });
+
+    window.addEventListener('resize', updateSlider);
+  </script>
+</div>
+</htmlcode>
+              </element><element id="594ca5ae-ad50-4a47-8c79-008f024c4c3e" data-section-id="594ca5ae-ad50-4a47-8c79-008f024c4c3e">
+
+
+                <htmlcode id="el-i552no99">
+<div id="root">
+  <section id="trending" class="bg-neutral-900 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" id="el-86lb9ipe">
+  <h2 class="text-3xl font-bold text-white mb-8 animate__animated animate__fadeIn">Trending Now</h2>
+  
+  <!-- Navigation Arrows -->
+  <button class="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-4 bg-black/50 hover:bg-black/75 text-white p-2 rounded-full z-10 transition duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+    </svg>
+  </button>
+  
+  <button class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-4 bg-black/50 hover:bg-black/75 text-white p-2 rounded-full z-10 transition duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 overflow-hidden">
+    <!-- Trending Item 1 -->
+    <div class="trending-item animate__animated animate__fadeIn">
+      <div class="relative group cursor-pointer">
+        <div class="aspect-[2/3] bg-neutral-800 rounded-lg overflow-hidden">
+          <img src="https://placehold.co/271x407/DEDEDE/555555?text=Image+Unavailable" alt="Image unavailable" class="w-full h-full object-cover transition-opacity duration-300 opacity-100 error-image" loading="lazy">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <h3 class="text-white font-semibold">The Dark Knight</h3>
+          <div class="flex items-center space-x-2 text-sm">
+            <span class="text-red-500">97% Match</span>
+            <span class="text-gray-300">2h 32m</span>
+          </div>
+          <div class="flex space-x-2 mt-2">
+            <span class="text-xs bg-gray-500/50 text-white px-2 py-1 rounded">Action</span>
+            <span class="text-xs bg-gray-500/50 text-white px-2 py-1 rounded">Crime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trending Item 2 -->
+    <div class="trending-item animate__animated animate__fadeIn animate__delay-1s">
+      <div class="relative group cursor-pointer">
+        <div class="aspect-[2/3] bg-neutral-800 rounded-lg overflow-hidden">
+          <img src="https://placehold.co/271x407/DEDEDE/555555?text=Image+Unavailable" alt="Image unavailable" class="w-full h-full object-cover transition-opacity duration-300 opacity-100 error-image" loading="lazy">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <h3 class="text-white font-semibold">Inception</h3>
+          <div class="flex items-center space-x-2 text-sm">
+            <span class="text-red-500">95% Match</span>
+            <span class="text-gray-300">2h 28m</span>
+          </div>
+          <div class="flex space-x-2 mt-2">
+            <span class="text-xs bg-gray-500/50 text-white px-2 py-1 rounded">Sci-Fi</span>
+            <span class="text-xs bg-gray-500/50 text-white px-2 py-1 rounded">Action</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trending Item 3 -->
+    <div class="trending-item animate__animated animate__fadeIn animate__delay-2s">
+      <div class="relative group cursor-pointer">
+        <div class="aspect-[2/3] bg-neutral-800 rounded-lg overflow-hidden">
+          <img src="https://placehold.co/271x407/DEDEDE/555555?text=Image+Unavailable" alt="Image unavailable" class="w-full h-full object-cover transition-opacity duration-300 opacity-100 error-image" loading="lazy">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <h3 class="text-white font-semibold">Breaking Bad</h3>
+          <div class="flex items-center space-x-2 text-sm">
+            <span class="text-red-500">99% Match</span>
+            <span class="text-gray-300">TV Series</span>
+          </div>
+          <div class="flex space-x-2 mt-2">
+            <span class="text-xs bg-gray-500/50 text-white px-2 py-1 rounded">Drama</span>
+            <span class="text-xs bg-gray-500/50 text-white px-2 py-1 rounded">Crime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trending Item 4 -->
+    <div class="trending-item animate__animated animate__fadeIn animate__delay-3s">
+      <div class="relative group cursor-pointer">
+        <div class="aspect-[2/3] bg-neutral-800 rounded-lg overflow-hidden">
+          <img src="https://placehold.co/271x407/DEDEDE/555555?text=Image+Unavailable" alt="Image unavailable" class="w-full h-full object-cover transition-opacity duration-300 opacity-100 error-image" loading="lazy">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+          <h3 class="text-white font-semibold">The Mandalorian</h3>
+          <div class="flex items-center space-x-2 text-sm">
+            <span class="text-red-500">94% Match</span>
+            <span class="text-gray-300">TV Series</span>
+          </div>
+          <div class="flex space-x-2 mt-2">
+            <span class="text-xs bg-gray-500/50 text-white px-2 py-1 rounded">Sci-Fi</span>
+            <span class="text-xs bg-gray-500/50 text-white px-2 py-1 rounded">Action</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- View More Button -->
+  <div class="text-center mt-8">
+    <button class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition duration-300 animate__animated animate__fadeIn animate__delay-4s">
+      View More
+    </button>
+  </div>
+</div>
+  </section>
+</div>
+</htmlcode>
+              </element><element id="600bfaa9-aa38-4e49-acc3-03c697255cb3" data-section-id="600bfaa9-aa38-4e49-acc3-03c697255cb3">
+
+<htmlCode>
+<div id="root">
+  <section id="categories" class="bg-neutral-800 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-white mb-8 animate__animated animate__fadeIn">Browse by Genre</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Action -->
+        <div class="category-card animate__animated animate__fadeIn">
+          <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+            <div class="aspect-video bg-neutral-700">
+              <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 opacity-75"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-white mb-2">Action</h3>
+                <p class="text-sm text-gray-200">250+ Titles</p>
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-red-600 opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+          </div>
+        </div>
+
+        <!-- Comedy -->
+        <div class="category-card animate__animated animate__fadeIn animate__delay-1s">
+          <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+            <div class="aspect-video bg-neutral-700">
+              <div class="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-800 opacity-75"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-white mb-2">Comedy</h3>
+                <p class="text-sm text-gray-200">180+ Titles</p>
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-yellow-600 opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+          </div>
+        </div>
+
+        <!-- Drama -->
+        <div class="category-card animate__animated animate__fadeIn animate__delay-2s">
+          <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+            <div class="aspect-video bg-neutral-700">
+              <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-75"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-white mb-2">Drama</h3>
+                <p class="text-sm text-gray-200">300+ Titles</p>
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+          </div>
+        </div>
+
+        <!-- Horror -->
+        <div class="category-card animate__animated animate__fadeIn animate__delay-3s">
+          <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+            <div class="aspect-video bg-neutral-700">
+              <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-800 opacity-75"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-white mb-2">Horror</h3>
+                <p class="text-sm text-gray-200">150+ Titles</p>
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+          </div>
+        </div>
+
+        <!-- Documentary -->
+        <div class="category-card animate__animated animate__fadeIn animate__delay-4s">
+          <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+            <div class="aspect-video bg-neutral-700">
+              <div class="absolute inset-0 bg-gradient-to-r from-green-600 to-green-800 opacity-75"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-white mb-2">Documentary</h3>
+                <p class="text-sm text-gray-200">120+ Titles</p>
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-green-600 opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+          </div>
+        </div>
+
+        <!-- Sci-Fi -->
+        <div class="category-card animate__animated animate__fadeIn animate__delay-5s">
+          <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+            <div class="aspect-video bg-neutral-700">
+              <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-indigo-800 opacity-75"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <h3 class="text-xl font-bold text-white mb-2">Sci-Fi</h3>
+                <p class="text-sm text-gray-200">200+ Titles</p>
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-indigo-600 opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Genre Filter Tags -->
+      <div class="mt-8 flex flex-wrap gap-2">
+        <button class="px-4 py-2 rounded-full bg-red-600 text-white hover:bg-red-700 transition-colors">
+          Popular
+        </button>
+        <button class="px-4 py-2 rounded-full bg-neutral-700 text-white hover:bg-neutral-600 transition-colors">
+          New Releases
+        </button>
+        <button class="px-4 py-2 rounded-full bg-neutral-700 text-white hover:bg-neutral-600 transition-colors">
+          Coming Soon
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="d93f1bc3-703e-4d68-b709-5b3e4f7c216b" data-section-id="d93f1bc3-703e-4d68-b709-5b3e4f7c216b">
+
+<htmlCode>
+<div id="root">
+  <section id="subscription" class="bg-neutral-900 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-4 animate__animated animate__fadeIn">Choose Your Plan</h2>
+        <p class="text-gray-300 animate__animated animate__fadeIn animate__delay-1s">Flexible plans for every viewer</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Free Plan -->
+        <div class="bg-neutral-800 rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp">
+          <div class="p-8">
+            <div class="text-center">
+              <h3 class="text-xl font-bold text-white mb-4">Free Plan</h3>
+              <div class="text-red-500 text-4xl font-bold mb-4">$0</div>
+              <p class="text-gray-400 mb-6">Perfect for starters</p>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center text-gray-300">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Limited Content Library
+              </li>
+              <li class="flex items-center text-gray-300">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                SD Quality
+              </li>
+              <li class="flex items-center text-gray-300">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                1 Device
+              </li>
+            </ul>
+            <button class="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+              Start Free
+            </button>
+          </div>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="bg-neutral-800 rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp animate__delay-1s relative">
+          <div class="absolute top-0 right-0 bg-red-600 text-white px-4 py-1 rounded-bl-lg">
+            Popular
+          </div>
+          <div class="p-8">
+            <div class="text-center">
+              <h3 class="text-xl font-bold text-white mb-4">Standard</h3>
+              <div class="text-red-500 text-4xl font-bold mb-4">$9.99</div>
+              <p class="text-gray-400 mb-6">Monthly</p>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center text-gray-300">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Full Content Library
+              </li>
+              <li class="flex items-center text-gray-300">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                HD Quality
+              </li>
+              <li class="flex items-center text-gray-300">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                2 Devices
+              </li>
+            </ul>
+            <button class="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+              Choose Standard
+            </button>
+          </div>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="bg-neutral-800 rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="p-8">
+            <div class="text-center">
+              <h3 class="text-xl font-bold text-white mb-4">Premium</h3>
+              <div class="text-red-500 text-4xl font-bold mb-4">$14.99</div>
+              <p class="text-gray-400 mb-6">Monthly</p>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center text-gray-300">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Full Content Library
+              </li>
+              <li class="flex items-center text-gray-300">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                4K + HDR Quality
+              </li>
+              <li class="flex items-center text-gray-300">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                4 Devices
+              </li>
+            </ul>
+            <button class="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+              Choose Premium
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center text-gray-400 mt-8 animate__animated animate__fadeIn animate__delay-3s">
+        All plans include ad-free viewing and cancel anytime guarantee
+      </p>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="c0bc855a-1dc4-4b2a-bd1f-2f8b0ad05e6d" data-section-id="c0bc855a-1dc4-4b2a-bd1f-2f8b0ad05e6d">
+
+<htmlCode>
+<div id="root">
+  <section id="download" class="bg-neutral-800 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Left Content -->
+        <div class="animate__animated animate__fadeInLeft">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+            Download & Watch Offline
+          </h2>
+          <p class="text-gray-300 text-lg mb-8">
+            Save your favorite shows and movies to watch on the go, anytime, anywhere. Available on all devices.
+          </p>
+          
+          <div class="space-y-6">
+            <!-- Feature 1 -->
+            <div class="flex items-start space-x-4">
+              <div class="bg-red-600 p-2 rounded-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-white font-semibold mb-2">Download for Offline</h3>
+                <p class="text-gray-400">Download unlimited shows and watch them offline</p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="flex items-start space-x-4">
+              <div class="bg-red-600 p-2 rounded-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-white font-semibold mb-2">Watch on Any Device</h3>
+                <p class="text-gray-400">Stream on your phone, tablet, laptop, and TV</p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="flex items-start space-x-4">
+              <div class="bg-red-600 p-2 rounded-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-white font-semibold mb-2">Secure Downloads</h3>
+                <p class="text-gray-400">Your downloads are protected and encrypted</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="mt-8 bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300 flex items-center space-x-2">
+            <span>Download App Now</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Right Content -->
+        <div class="relative animate__animated animate__fadeInRight">
+          <div class="bg-neutral-900 rounded-3xl p-6 md:p-8 relative z-10">
+            <div class="aspect-[9/16] bg-neutral-800 rounded-xl overflow-hidden relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-red-600/20 to-purple-600/20 animate-pulse"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <div class="flex items-center space-x-4">
+                  <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <div class="h-2 bg-white/20 rounded-full w-3/4 mb-2"></div>
+                    <div class="h-2 bg-white/20 rounded-full w-1/2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Decorative Elements -->
+          <div class="absolute -top-4 -right-4 w-72 h-72 bg-red-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div class="absolute -bottom-4 -left-4 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @keyframes blob {
+        0% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0px, 0px) scale(1); }
+      }
+      .animate-blob {
+        animation: blob 7s infinite;
+      }
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+    </style>
+  </section>
+</div>
+</htmlCode></element><element id="d1d18421-7656-462a-899e-2af98b3f1743" data-section-id="d1d18421-7656-462a-899e-2af98b3f1743">
+
+<htmlCode>
+<div id="root">
+  <section id="faq" class="bg-neutral-900 py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-4 animate__animated animate__fadeIn">Frequently Asked Questions</h2>
+        <p class="text-gray-300 animate__animated animate__fadeIn animate__delay-1s">Got questions? We've got answers.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item border border-neutral-700 rounded-lg overflow-hidden animate__animated animate__fadeInUp">
+          <button class="faq-button w-full flex justify-between items-center p-4 bg-neutral-800 text-white hover:bg-neutral-700 transition-colors duration-300">
+            <span class="text-lg font-medium">What is Kiraflix?</span>
+            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer bg-neutral-800 px-4 overflow-hidden" style="max-height: 0px; transition: max-height 0.3s ease-out;">
+            <p class="py-4 text-gray-300">Kiraflix is a streaming service that offers a wide variety of award-winning shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item border border-neutral-700 rounded-lg overflow-hidden animate__animated animate__fadeInUp animate__delay-1s">
+          <button class="faq-button w-full flex justify-between items-center p-4 bg-neutral-800 text-white hover:bg-neutral-700 transition-colors duration-300">
+            <span class="text-lg font-medium">How much does Kiraflix cost?</span>
+            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer bg-neutral-800 px-4 overflow-hidden" style="max-height: 0px; transition: max-height 0.3s ease-out;">
+            <p class="py-4 text-gray-300">Kiraflix offers different plans to meet your needs. Our plans start from free and go up to premium subscriptions with additional features.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item border border-neutral-700 rounded-lg overflow-hidden animate__animated animate__fadeInUp animate__delay-2s">
+          <button class="faq-button w-full flex justify-between items-center p-4 bg-neutral-800 text-white hover:bg-neutral-700 transition-colors duration-300">
+            <span class="text-lg font-medium">Where can I watch?</span>
+            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer bg-neutral-800 px-4 overflow-hidden" style="max-height: 0px; transition: max-height 0.3s ease-out;">
+            <p class="py-4 text-gray-300">Watch anywhere, anytime. Sign in with your Kiraflix account to watch instantly on the web at kiraflix.com from your personal computer or on any internet-connected device.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item border border-neutral-700 rounded-lg overflow-hidden animate__animated animate__fadeInUp animate__delay-3s">
+          <button class="faq-button w-full flex justify-between items-center p-4 bg-neutral-800 text-white hover:bg-neutral-700 transition-colors duration-300">
+            <span class="text-lg font-medium">How do I cancel?</span>
+            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer bg-neutral-800 px-4 overflow-hidden" style="max-height: 0px; transition: max-height 0.3s ease-out;">
+            <p class="py-4 text-gray-300">Kiraflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-gray-300 mb-4">Still have questions?</p>
+        <button class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+          Contact Support
+        </button>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.faq-button').forEach(button => {
+        button.addEventListener('click', () => {
+          const faqItem = button.parentElement;
+          const answer = button.nextElementSibling;
+          const icon = button.querySelector('svg');
+          
+          // Toggle current item
+          const isOpen = answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '';
+          
+          if (!isOpen) {
+            answer.style.maxHeight = `${answer.scrollHeight}px`;
+            icon.classList.add('rotate-180');
+            faqItem.classList.add('border-red-600');
+          } else {
+            answer.style.maxHeight = '0px';
+            icon.classList.remove('rotate-180');
+            faqItem.classList.remove('border-red-600');
+          }
+        });
+      });
+    </script>
+  </section>
+</div>
+</htmlCode></element><element id="60706bd4-7cc6-4a0c-8e28-89636a8dbaed" data-section-id="60706bd4-7cc6-4a0c-8e28-89636a8dbaed">
+
+<htmlCode>
+<div id="root">
+  <footer id="footer" class="bg-neutral-900 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <!-- Company Info -->
+        <div class="col-span-2 md:col-span-1 animate__animated animate__fadeIn">
+          <h3 class="text-red-600 font-bold text-2xl mb-4">KIRAFLIX</h3>
+          <p class="text-gray-400 mb-4">The ultimate streaming experience for everyone.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="animate__animated animate__fadeIn animate__delay-1s">
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#hero" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+            <li><a href="#featured" class="text-gray-400 hover:text-white transition-colors">Featured</a></li>
+            <li><a href="#trending" class="text-gray-400 hover:text-white transition-colors">Trending</a></li>
+            <li><a href="#categories" class="text-gray-400 hover:text-white transition-colors">Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="animate__animated animate__fadeIn animate__delay-2s">
+          <h4 class="text-white font-semibold mb-4">Support</h4>
+          <ul class="space-y-2">
+            <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="animate__animated animate__fadeIn animate__delay-3s">
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2">
+            <li class="text-gray-400">
+              <a href="mailto:support@kiraflix.com" class="hover:text-white transition-colors">
+                support@kiraflix.com
+              </a>
+            </li>
+            <li class="text-gray-400">
+              <a href="tel:+1234567890" class="hover:text-white transition-colors">
+                +1 (234) 567-890
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-neutral-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2024 Kiraflix. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          

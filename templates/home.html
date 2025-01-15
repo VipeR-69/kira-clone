@@ -12,31 +12,46 @@
 
     <body>
         {% csrf_token %}
-
+        <section>
                 <nav>
                     <ul class="sidebar">
                         <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height='26' width='26' fill="currentColor"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg></a></li>
+                        <form class="search-container" action="" method="">
+                            <input type="text" name="q" class="search-box" placeholder="Search Movies & TV Shows" />
+                            <button type="submit" class="search-button">🔍</button>
+                        </form>
                         <li><a href="#">All</a></li>
                         <li><a href="#">Movies</a></li>
                         <li><a href="#">TV Shows</a></li>
-                        <li><a href="#">New</a></li>
-                        <li><a href="#">Search</a></li>
-                        <li><a href="#">Sign in</a></li>
+                        <li><a href="#">Genre</a></li>
                     </ul>
                 </nav>
 
                 <nav>
                     <ul>
-                        <li>Kiraflix</li>
+                        <li>KIRAFLIX</li>
                         <li class='hideOnMobile'><a href="#">All</a></li>
                         <li class='hideOnMobile'><a href="#">Movies</a></li>
                         <li class='hideOnMobile'><a href="#">TV Shows</a></li>
-                        <li class='hideOnMobile'><a href="#">New</a></li>
-                        <li class='hideOnMobile'><a href="#">Search</a></li>
-                        <li class='hideOnMobile'><a href="#">Sign in</a></li>
+                        <li class='hideOnMobile'><a href="#">Genre</a></li>
+                        <form class="search-container, hideOnMobile" action="" method="">
+                            <input type="text" name="q" class="search-box" placeholder="Search Movies & TV Shows" />
+                            <button type="submit" class="search-button">🔍</button>
+                        </form>
                         <li class='menu-button' onclick=showSidebar()><a href"#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="26" width="26" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg></a></li>
                     </ul>
                 </nav>
+            </section>
+
+            <section class="welcome">
+                <div class="welcomeLeft">
+                    <h1 id="welcomeHeading">Unlimited Movies &<br>TV Shows</h1><br>
+                    <p>Watch Anything, Anytime, Anywhere.<br> Stream Unlimited Content with no restrictions.</p>
+                </div>
+                <div class="welcomeRight">
+                    <h1 id="welcomeHeading">Hello</h1>
+                </div>  
+            </section>
 
         <script>
             function showSidebar(){

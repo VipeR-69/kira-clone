@@ -7,12 +7,12 @@
 
 body{
     min-height: 100vh;
-    background: #011422;
+    background: #000000;
 }
 
 nav{
     padding: 5px 5%;
-    background: rgb(198, 18, 18);
+    background-color: #00000088;
 }
 
 nav ul{
@@ -29,7 +29,7 @@ nav li{
 
 nav li:first-child{
     margin-right: auto;
-    color: antiquewhite;
+    color: #DC2626;
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -37,16 +37,17 @@ nav li:first-child{
 
 nav a{
     height: 100%;
+    font-size: 16px;
     padding: 0 30px;
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: #ededed;
+    color: #D1D5DB;
+    font-weight: 500;
 }
 
 nav a:hover{
-    color: #000000;
-    font-size: 19px;
+    color: #747474;
 }
 
 
@@ -58,7 +59,7 @@ nav a:hover{
     padding: 30px 25px;
     width: 250px;
     z-index: 999;
-    background-color: rgba(255, 0, 0, 0.232);
+    background-color: rgba(103, 103, 103, 0.232);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
@@ -78,6 +79,79 @@ nav a:hover{
 .menu-button{
     display: none;
 }
+
+.welcome{
+    position: relative;
+    background-color: rgba(39, 39, 39, 0.877);
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcomeLeft{
+    margin-left: 200px;
+
+}
+.welcomeLeft h1{
+    font-size: 55px;
+    color: aliceblue;
+}
+.welcomeLeft p{
+    font-size: 18px;
+    color: aliceblue;
+}
+
+.welcomeRight{
+    margin-right: 250px;
+}
+.welcomeRight h1{
+    font-size: 55px;
+}
+.welcomeRight p{
+    font-size: 18px;
+    color: aliceblue;
+}
+
+#welcomeHeading{
+    color: aliceblue;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .search-box {
+    width: 250px;
+    padding: 10px;
+    border: 1.9px solid #494949;
+    border-radius: 7px 7px 7px 7px;
+    outline: none;
+    font-size: 16px;
+    background-color: #000000;
+    color: #D1D5DB;
+  }
+    
+  .search-button {
+    padding: 5px 15px;
+    border: none;
+    background-color: #007bff00;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .search-button:hover {
+    background-color: #333333;
+  }
+  
+  .search-box:focus {
+    border-color: #292929;
+  }
+  
 
 
 @media(max-width: 600px) {
