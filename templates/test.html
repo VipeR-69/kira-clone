@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Slider</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: #fff;
+        }
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .movie {
+            min-width: 20%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .movie img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .navigation {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+        .navigation button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            pointer-events: all;
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .navigation button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="movie"><img src="https://via.placeholder.com/200x300" alt="Movie 1"></div>
+            <div class="movie"><img src="https://via.placeholder.com/200x300" alt="Movie 2"></div>
+            <div class="movie"><img src="https://via.placeholder.com/200x300" alt="Movie 3"></div>
+            <div class="movie"><img src="https://via.placeholder.com/200x300" alt="Movie 4"></div>
+            <div class="movie"><img src="https://via.placeholder.com/200x300" alt="Movie 5"></div>
+            <div class="movie"><img src="https://via.placeholder.com/200x300" alt="Movie 6"></div>
+            <div class="movie"><img src="https://via.placeholder.com/200x300" alt="Movie 7"></div>
+            <div class="movie"><img src="https://via.placeholder.com/200x300" alt="Movie 8"></div>
+        </div>
+        <div class="navigation">
+            <button id="prev">&#8249;</button>
+            <button id="next">&#8250;</button>
+        </div>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        let currentIndex = 0;
+        const totalMovies = document.querySelectorAll('.movie').length;
+        const visibleMovies = 5;
+
+        function updateSlider() {
+            const offset = -(currentIndex * (100 / visibleMovies));
+            slider.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < totalMovies - visibleMovies) {
+                currentIndex++;
+                updateSlider();
+            }
+        });
+    </script>
+</body>
+</html>
+
+<button class="bg-red-600 text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-red-700 transition duration-300 w-full md:w-auto" id="el-d98841ca">
+    Start Watching For Free
+  </button>
+  <button class="bg-red-600 text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-red-700 transition duration-300 w-full md:w-auto" id="el-d98841ca">
+    Start Watching For Free
+  </button>

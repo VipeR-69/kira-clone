@@ -7,7 +7,7 @@
         <title>Home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{% static 'landing.css' %}">
+        <link rel="stylesheet" href="{% static 'index.css' %}">
     </head>
 
     <body>
@@ -45,13 +45,21 @@
 
             <section class="welcome">
                 <div class="welcomeLeft">
-                    <h1 id="welcomeHeading">Unlimited Movies &<br>TV Shows</h1><br>
-                    <p>Watch Anything, Anytime, Anywhere.<br> Stream Unlimited Content with no restrictions.</p>
+                    <h1 class="welcomeHeading">Unlimited Movies &<br>TV Shows</h1><br>
+                    <p class="welcomePara">Watch anything, anytime, anywhere.<br> Stream Unlimited Content with no restrictions.</p><br>
+                    <button class="signIn" type="submit">Sign in</button>
                 </div>
-                <div class="welcomeRight">
-                    <h1 id="welcomeHeading">Hello</h1>
-                </div>  
+                <div class="welcomeRight hideOnMobile">
+                    <h1 class="welcomeHeading">Hello</h1>
+                </div>
             </section>
+
+            <section class="movies">
+                <div class="sectionHeading">
+                    <h1>Movies</h1>
+                </div>
+            </section>
+
 
         <script>
             function showSidebar(){
